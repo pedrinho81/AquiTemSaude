@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{fill:#00C9FF;}
+	.st2{fill:none;}
+	.st3{fill:#FC1010;stroke:#FF0000;stroke-miterlimit:10;}
+	.st4{fill:#FFFFFF;}
+	.st5{fill:url(#SVGID_3_);}
+	.st6{fill:url(#SVGID_4_);}
+	.st7{fill:url(#SVGID_5_);}
+	.st8{clip-path:url(#SVGID_2_);fill:#FFFFFF;stroke:#FC1010;stroke-width:2;stroke-miterlimit:10;}
+	.st9{fill:#00AAFF;}
+	.st10{font-family:'Qanelas-Bold';}
+	.st11{font-size:62px;}
+	.st12{font-family:'Qanelas-Light';}
+	.st13{font-size:18px;}
+	.st14{letter-spacing:4;}
+	.st15{display:none;fill:#00AAFF;enable-background:new    ;}
+	.st16{font-size:69.0897px;}
+	.st17{display:none;enable-background:new    ;}
+	.st18{font-size:20.5217px;}
+</style>
+<g>
+	<defs>
+		<circle id="SVGID_1_" cx="960" cy="563.1" r="317.3"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st0">
+		<path class="st1" d="M872.8,615.9H635.5V447.1h237.4c-5.1,4.7-38.2,36.1-37.2,86.6C836.6,581.6,867.4,610.9,872.8,615.9z"/>
+		<path class="st2" d="M1035.4,505.9"/>
+		<path class="st3" d="M959.4,709.7c-37.5-51.1-85.1-99.4-102.2-157.6c-17.2-59.5,40.7-130.2,102.1-124.9l0,0
+			c54.8-4.4,105.5,51,105.2,103.9c-5.5,66.5-67.3,125.5-105.3,178.7"/>
+		<path class="st1" d="M875.4,443.3V237.4h168.7v205.9c-4.7-4.4-36.1-33.1-86.6-32.3C909.6,411.8,880.4,438.6,875.4,443.3z"/>
+		<path class="st1" d="M1046.1,447.1h237.4v168.7h-237.4c5.1-4.7,38.2-36.1,37.2-86.6C1082.2,481.4,1051.4,452.1,1046.1,447.1z"/>
+		<rect x="945" y="493.2" class="st4" width="28" height="93"/>
+		<rect x="912.5" y="525.8" class="st4" width="93" height="28"/>
+		
+			<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="754.55" y1="466.1" x2="754.55" y2="634.9" gradientTransform="matrix(1 0 0 -1 0 1082)">
+			<stop  offset="0" style="stop-color:#2AD8FF"/>
+			<stop  offset="0.6624" style="stop-color:#00A6FF"/>
+			<stop  offset="1" style="stop-color:#00A6FF"/>
+		</linearGradient>
+		<path class="st5" d="M873.2,615.9H635.9V447.1h237.4c-5.1,4.7-38.2,36.1-37.2,86.6C837,581.7,867.9,610.9,873.2,615.9z"/>
+		
+			<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="1165.1499" y1="466.2" x2="1165.1499" y2="634.9" gradientTransform="matrix(1 0 0 -1 0 1082)">
+			<stop  offset="0" style="stop-color:#2AD8FF"/>
+			<stop  offset="0.6624" style="stop-color:#00A6FF"/>
+			<stop  offset="1" style="stop-color:#00A6FF"/>
+		</linearGradient>
+		<path class="st6" d="M1046.4,447.1h237.4v168.7h-237.4c5.1-4.7,38.2-36.1,37.2-86.6C1082.8,481.4,1051.8,452.1,1046.4,447.1z"/>
+		
+			<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="960.3" y1="638.6" x2="960.3" y2="844.4" gradientTransform="matrix(1 0 0 -1 0 1082)">
+			<stop  offset="0" style="stop-color:#2AD8FF"/>
+			<stop  offset="0.6624" style="stop-color:#00A6FF"/>
+			<stop  offset="1" style="stop-color:#00A6FF"/>
+		</linearGradient>
+		<path class="st7" d="M876,443.4V237.6h168.7v205.8c-4.7-4.4-36.1-33.1-86.6-32.3C910.2,411.9,881,438.7,876,443.4z"/>
+	</g>
+	<path class="st8" d="M913.1,539.7h32.5c1.6-4.6,2.2-9.2,3.7-13.7c1.3,9,2.7,18,4,27c2-5.3,4-10.7,6-16c0.8,3.8,2.2,7.2,3,11
+		c1.8-6.2,3.2-11.8,5-18c0.8,6.8,2.2,12.2,3,19l3.3-9.7c10.8,0,21.7,0,32.5,0"/>
+</g>
+<text transform="matrix(1 0 0 1 722.4487 771.6914)" class="st9 st10 st11">AQUI TEM SÁUDE</text>
+<text transform="matrix(1 0 0 1 822.175 805.1953)" class="st12 st13 st14">SÁUDE PERTO DE VOCÊ</text>
+<text transform="matrix(1 0 0 1 718.2563 771.6909)" class="st15 st10 st16">Aqui tem Sáude</text>
+<text transform="matrix(1 0 0 1 803.0729 805.1948)" class="st17 st12 st18 st14">SÁUDE PERTO DE VOCÊ</text>
+</svg>

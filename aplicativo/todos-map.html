@@ -1,0 +1,258 @@
+<!--                                                              __
+  ___                 _   _                      _____           / /      _       
+ / _ \               (_) | |                    /  ___|         /_/      | |      
+/ /_\ \  __ _  _   _  _  | |_   ___  _ __ ___   \ `--.   __ _  _   _   __| |  ___ 
+|  _  | / _` || | | || | | __| / _ \| '_ ` _ \   `--. \ / _` || | | | / _` | / _ \
+| | | || (_| || |_| || | | |_ |  __/| | | | | | /\__/ /| (_| || |_| || (_| ||  __/
+\_| |_/ \__, | \__,_||_|  \__| \___||_| |_| |_| \____/  \__,_| \__,_| \__,_| \___|
+           | |                                                                    
+           |_|                                                                                     
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ 
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../img/favicon.png" />
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link type="text/css" rel="stylesheet" href="./css/materialize.css">
+   <link type="text/css" rel="stylesheet" href="./css/style.css">
+   <link type="text/css" rel="stylesheet" href="./css/todos.css">
+   <link type="text/css" rel="stylesheet" href="./css/todos-map.css">
+   <title>Aqui tem Saúde - Início</title>
+ </head>
+ 
+ <body>
+ 
+   <header>
+     <nav>
+       <div class="nav-wrapper">
+         <a href="./home.html" class="brand-logo"><img src="./img/logo-topo.png" alt="Aqui tem Saúde"></a>
+         <ul id="nav-mobile" class="right hide-on-med-and-down">
+           <li><a href="./home.html">Início</a></li>
+           <li><a href="#pesquisar">Pesquisar</a></li>
+           <li><a href="#!">Histórico</a></li>
+         </ul>
+       </div>
+     </nav>
+   </header>
+ 
+   <section class="banner">
+     <div class="container">
+       <div class="banner-text">
+         <h1>Resultado</h1>
+       </div>
+     </div>
+   </section>
+ 
+   <div class="mobile">
+ 
+     <section class="topo">
+ 
+       <div class="infos">
+ 
+ 
+         <div class="voltar">
+          <a href="./todos.html"><i class="far fa-arrow-alt-circle-left black-text"></i></a>
+         </div>
+ 
+         <div class="titulo">
+ 
+           <img src="../img/icones/logo-esquerdo.svg" alt="">
+           <h1>Escolha um tipo de clínica</h1>
+           <img src="../img/icones/logo-direito.svg" alt="">
+ 
+ 
+         </div>
+ 
+       </div>
+ 
+       <div class="tipos">
+         <nav>
+           <ul>
+             <li>
+               <a href="">
+                 <div id="ativo"><img src="../img/icones/todos.svg" alt=""></div>
+                 <p>Todos</p>
+               </a>
+             </li>
+ 
+             <li>
+               <a href="">
+                 <div><img src="../img/icones/postos.svg" alt=""></div>
+                 <p>Postos</p>
+               </a>
+             </li>
+ 
+             <li>
+               <a href="">
+                 <div><img src="../img/icones/clinicas.svg" alt=""></div>
+                 <p>Clínicas</p>
+               </a>
+             </li>
+ 
+             <li>
+               <a href="">
+                 <div><img src="../img/icones/emergencia.svg" alt=""></div>
+                 <p>Emergência</p>
+               </a>
+             </li>
+ 
+           </ul>
+         </nav>
+       </div>
+ 
+     </section>
+
+     <section class="resultado">
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.4694235961933!2d-34.89992808514889!3d-8.053504894201131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab188e25767461%3A0x280995d9e770b777!2sHospital%20da%20Restaura%C3%A7%C3%A3o%20Gov.%20Paulo%20Guerra!5e0!3m2!1spt-BR!2sbr!4v1619412409894!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+      <div class="clinicas">
+
+        <div class="filtros">
+          <p>Filtros: </p>
+          <div class="chip red">
+            Todos
+           <a href="./home.html" class="black-text"><i class="close material-icons">close</i></a>
+          </div>
+        </div>
+
+        <div class="resultado-clinicas">
+          <div class="titulo">
+            <img src="../img/icones/logo-esquerdo.svg" alt="">
+            <h1>Perto de você</h1>
+            <img src="../img/icones/logo-direito.svg" alt="">
+          </div>
+
+          <div class="lista-de-clinicas">
+
+            <ul>
+
+              <li class="white">
+                <a href="">
+                  <div class="imagem-clinica">
+                    <img src="./img/usf-coelhos.png" alt="USF Colehos">
+                  </div>
+              
+                  <div class="dados-clinica">
+                    <p>Unidade de saúde da família (USF)</p>
+                    <p>Nome: Coelhos I</p>
+                    <p>Telefone: (81) 3355-4648</p>
+                    <p>Endereço: R. Bituruna, Coelhos </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="white">
+                <a href="">
+                  <div class="imagem-clinica">
+                    <img src="./img/usf-coelhos.png" alt="USF Colehos">
+                  </div>
+              
+                  <div class="dados-clinica">
+                    <p>Unidade de saúde da família (USF)</p>
+                    <p>Nome: Coelhos I</p>
+                    <p>Telefone: (81) 3355-4648</p>
+                    <p>Endereço: R. Bituruna, Coelhos </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="white">
+                <a href="">
+                  <div class="imagem-clinica">
+                    <img src="./img/usf-coelhos.png" alt="USF Colehos">
+                  </div>
+              
+                  <div class="dados-clinica">
+                    <p>Unidade de saúde da família (USF)</p>
+                    <p>Nome: Coelhos I</p>
+                    <p>Telefone: (81) 3355-4648</p>
+                    <p>Endereço: R. Bituruna, Coelhos </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="white">
+                <a href="">
+                  <div class="imagem-clinica">
+                    <img src="./img/usf-coelhos.png" alt="USF Colehos">
+                  </div>
+              
+                  <div class="dados-clinica">
+                    <p>Unidade de saúde da família (USF)</p>
+                    <p>Nome: Coelhos I</p>
+                    <p>Telefone: (81) 3355-4648</p>
+                    <p>Endereço: R. Bituruna, Coelhos </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="white">
+                <a href="">
+                  <div class="imagem-clinica">
+                    <img src="./img/usf-coelhos.png" alt="USF Colehos">
+                  </div>
+              
+                  <div class="dados-clinica">
+                    <p>Unidade de saúde da família (USF)</p>
+                    <p>Nome: Coelhos I</p>
+                    <p>Telefone: (81) 3355-4648</p>
+                    <p>Endereço: R. Bituruna, Coelhos </p>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+
+
+          </div>
+          
+
+        </div>
+
+      </div>
+
+     </section>
+   </div>
+ 
+   <footer>
+ 
+       <div class="infos-rodape">
+         <div class="sobre">
+           <h2>Sobre o Projeto</h2>
+           <p>Projeto criado para a conclusão do primeiro perido do curso de graduação ADS/SI 2021,
+             pelos alunos: Igor Lopes, João Lucas, Jônatas Felix, Pedro Henrique, Walkiria Torres. </p>
+         </div>
+         <div class="contatos">
+           <h2>Contatos</h2>
+           <ul>
+             <li><a href="#!"><i class="fab fa-instagram"></i>Instagram</a></li>
+             <li><a href="#!"><i class="fab fa-linkedin"></i>Linkedin</a></li>
+             <li><a href=""><i class="far fa-envelope"></i>contato@aquitemsaude.com.br</a></li>
+           </ul>
+         </div>
+       </div>
+ 
+       <div class="copyright">
+         <p>Copyright © 2021 - Todos os direitos reservados.</p>
+       </div>
+       
+   </footer>
+ 
+   <!-- JavaScript -->
+   <script src="https://kit.fontawesome.com/2f08f0adc1.js" crossorigin="anonymous"></script>
+   <script src="./js/materialize.js"></script>
+   <script src="./js/script.js"></script>
+ 
+ </body>
+ 
+ </html>

@@ -1,0 +1,26 @@
+
+@media screen and (max-width: 720px) {
+  
+  .resultado {
+    width: 100%;
+  }
+  
+  iframe {
+    visibility: visible;
+    height: 100vh;
+  }
+  
+  .clinicas {
+      height: 80px;
+  }
+
+  .filtros {
+    display: none;
+  }
+
+  .lista-de-clinicas {
+    display: none;
+  }
+
+
+}
