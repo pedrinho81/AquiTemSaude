@@ -150,14 +150,14 @@
               <select name="" id="">
                 <option value="">Selecionar Cidade</option>
               </select>
-              <select name="" id="">
+              <select name="" id="bairro__select">
                 <option value="">Selecionar Bairro</option>
               </select>
             </form>
           </div>
       
           <div class="button">
-            <a href="#">Procurar</a>
+           <button id="bairro__button" href="#">Procurar</button>
           </div>
         </div>
 
@@ -237,5 +237,45 @@
   <script src="./js/script.js"></script>
 
 </body>
+<script>
+  
 
+  fetch(`http://dados.recife.pe.gov.br/api/3/action/datastore_search_sql?sql=SELECT * from "54232db8-ed15-4f1f-90b0-2b5a20eef4cf"`)//** consulta a api buscando todas as unidades de saude
+    .then(x => x.json()) //** Converte o resultado para JSON
+    .then(x => x.result) //** Acessa a propriedade de resultados
+    .then(x => {
+      var select = document.getElementById("bairro__select"); //** Encontra o select do html pelo id
+      var options = x.records.map(x => x.bairro); //** De todo o resultado, vamos pegar só o bairro
+      
+      var unique = [...new Set(options)] //** remover os repetidos
+
+      for (var i = 0; i < unique.length; i++) { //** para cada bairro
+        var opt = unique[i]; 
+        var el = document.createElement("option"); //** Crio uma opção dentro do select
+        el.textContent = opt; //** Com o texto sendo o nome do bairro
+        el.value = opt; //** E o valor sendo o nome do bairro também
+        select.appendChild(el); //** Adicionamos ele como opção no select
+      }
+
+    })
+  
+
+  var buscarDadosBairro = function (btn) { //** Médoto para buscar as informações do bairro específico
+    var select = document.getElementById("bairro__select") 
+    let bairro = select.options[select.options.selectedIndex].value //** Encontro o Bairro selecionado
+
+    fetch(`http://dados.recife.pe.gov.br/api/3/action/datastore_search_sql?sql=SELECT * from "54232db8-ed15-4f1f-90b0-2b5a20eef4cf" where bairro = '${bairro}'`) //** Consulto o bairro específico
+      .then(x => x.json())
+      .then(x => x.result.records)
+      .then(dadosCompletosDoBairro => {
+        console.log(dadosCompletosDoBairro)//** Escreve nos logs o bairro
+        //** Aqui você deve escrever o código conforme o que você quer fazer com o bairro
+        //** Segundo as requisições do sistema
+      }) 
+                                 
+  }
+
+  var bairroButton = document.getElementById('bairro__button') //** Encontramos o botão do bairro
+  bairroButton.addEventListener('click', buscarDadosBairro); //** Vinculamos o método acima com o botão, ao clicar
+</script>
 </html>
