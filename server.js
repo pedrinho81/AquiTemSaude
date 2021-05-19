@@ -80,7 +80,7 @@ bairroButton.addEventListener("click", adicionar)
 ///
 let nome = document.getElementById("name")
 let endereco = document.getElementById("endereco")
-
+let keyValue = endereco.textContent
 function adicionar()
 {                         //chave     //value
     localStorage.setItem(nome.value, endereco.value);
@@ -89,15 +89,17 @@ function adicionar()
     nome.value = nome.textContent
     endereco.value = endereco.textContent;
     key = nome.textContent
-    let keyValue = nome.value
+    
+    keyValue = endereco.value
+    console.log(keyValue)
     // window.location.href= "./todos.html"
     return ler(keyValue, key) 
    
 }
-
+enderecoAlert = document.getElementById("endereco")
 function ler(keyValue, key)
 {
-    var obj = localStorage.getItem(keyValue);
+    var obj = localStorage.getItem(key.value);
     if(obj != null)
         alert(`O endereço da UBS ${key} é ${keyValue}`)
     else
