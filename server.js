@@ -1,84 +1,112 @@
 
+console.log("init")
 
+data = ""
+dadosUs = ""
 
-
-
-
-
-/*const express = require("express")
-const app = express()
-const axios = require("axios")
-
-app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/index.html")
-})
-
-app.listen("4567",() => console.log("executando"))*/
-
-
-/*app.get("/", async(req, res) => {
-
-    try {
-    const { data } = await axios("https://jsonplaceholder.typicode.com/users")
-    return res.json(data)
-    } catch(error) {
-        console.error(error)
-    }
-
-})*/
-
-
-
-
-
-
-
-
-
-/*//cors       
-cors = require("cors")
-//server
-const express = require("express")
-
-const axios = require("axios")
-
-const app = express()
-app.use(cors())
-//rota para consumir a api
-app.get("../aplicativo/home.html", async(req, res) => {
-   try {
-       //response é a resposta do axios, MAS eu tiro o data de dentro do response
-   const {data} = await axios("https://jsonplaceholder.typicode.com/users")
-   
-        return res.json(data)
-   } catch (error) {
-       console.log("se fudeu")
-   }
+fetch(`http://dados.recife.pe.gov.br/api/3/action/datastore_search_sql?sql=SELECT * from "54232db8-ed15-4f1f-90b0-2b5a20eef4cf"`)//** consulta a api buscando todas as unidades de saude
+  .then(x => x.json()) //** Converte o resultado para JSON
+  .then(x => x.result) //** Acessa a propriedade de resultados
+  .then(x => {
+    var select = document.getElementById("bairro__select"); //** Encontra o select do html pelo id
+    var options = x.records.map(x => x.bairro); //** De todo o resultado, vamos pegar só o bairro
     
-})
+    var unique = [...new Set(options)] //** remover os repetidos
 
-app.listen("4567", (console.log("rodando"))) */
-
-/*const cors = require("cors")
-const express = require("express")
-
-const app = express()
-const axios = require("axios")
-
-
-app.use(cors())
-
-app.get("/", async(req, res) => {
-
-    try {
-    const { data } = await axios("https://jsonplaceholder.typicode.com/users")
-    return res.json(data[0].name)
-    } catch(error) {
-        console.error(error)
+    for (var i = 0; i < unique.length; i++) { //** para cada bairro
+      var opt = unique[i]; 
+      var el = document.createElement("option"); //** Crio uma opção dentro do select
+      el.textContent = opt; //** Com o texto sendo o nome do bairro
+      el.value = opt; //** E o valor sendo o nome do bairro também
+      select.appendChild(el); //** Adicionamos ele como opção no select
+     
     }
-})
 
-app.listen("4567")*/
+  })
+
+
+var buscarDadosBairro = function (btn) { //** Médoto para buscar as informações do bairro específico
+  var select = document.getElementById("bairro__select") 
+  let bairro = select.options[select.options.selectedIndex].value //** Encontro o Bairro selecionado
+  let nome = document.getElementById("name").innerHTML
+  
+  try {
+    fetch(`http://dados.recife.pe.gov.br/api/3/action/datastore_search_sql?sql=SELECT * from "54232db8-ed15-4f1f-90b0-2b5a20eef4cf" where bairro = '${bairro}'`) //** Consulto o bairro específico
+    .then(x => x.json())
+    .then(x => x.result.records)
+    .then(dadosBairro => {
+      for (let i = 0; i < dadosBairro.length; i++) {
+        console.log(dadosBairro[i])
+        data = dadosBairro[i]
+        let resultadoNome = document.getElementById("name")
+        let nomeBairro = data.nome_oficial;  
+        let resultadoEndereco = document.getElementById("endereco")
+        let endereco = data.endereço
+      resultadoNome.innerHTML = nomeBairro;
+      resultadoEndereco.innerHTML = endereco
+        
+            
+    }
+      //** Escreve nos logs o bairro
+      //** Aqui você deve escrever o código conforme o que você quer fazer com o bairro
+      //** Segundo as requisições do sistema
+    }) 
+  } catch (error) {
+    console.error(error)
+  }
+  
+                               
+}
+
+ //** para cada ubs
+       //** Crio uma opção dentro do select
+       //** Com o texto sendo o nome do bairro
+       //** E o valor sendo o nome do bairro também
+       //** Adicionamos ele como opção no select
+    
+
+
+var bairroSelect = document.getElementById('bairro__select') //** Encontramos o select do bairro
+bairroSelect.addEventListener('click', buscarDadosBairro); //** Vinculamos o método acima com o botão, ao clicar
+
+
+
+
+//ADICIONAR NO WEBSTORAGE
+let bairroButton = document.getElementById("bairro__button")
+
+bairroButton.addEventListener("click", adicionar)
+
+///
+let nome = document.getElementById("name")
+let endereco = document.getElementById("endereco")
+
+function adicionar()
+{                         //chave     //value
+    localStorage.setItem(nome.value, endereco.value);
+    alert("Item adicionado.");
+    nome.innerHTML = nome.textContent
+    nome.value = nome.textContent
+    endereco.value = endereco.textContent;
+    key = nome.textContent
+    let keyValue = nome.value
+    // window.location.href= "./todos.html"
+    return ler(keyValue, key) 
+   
+}
+
+function ler(keyValue, key)
+{
+    var obj = localStorage.getItem(keyValue);
+    if(obj != null)
+        alert(`O endereço da UBS ${key} é ${keyValue}`)
+    else
+        alert("O item procurado não existe.")
+}
+
+
+
+
 
 
 
