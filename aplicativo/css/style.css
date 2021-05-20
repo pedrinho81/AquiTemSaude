@@ -534,3 +534,21 @@ select {
 }
 
 }
+
+#container, #popup{
+  width: 600px;
+  height: 600px;
+  overflow: hidden;
+  color: pink;
+}
+#pag{
+  width: 600px;
+  height: 1200px;
+}
+#popup{
+  display: flex;
+  
+  margin: 50%;
+  margin-top: 600px;
+  background-color: grey
+}
