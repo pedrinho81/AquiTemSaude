@@ -24,6 +24,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="./css/materialize.css">
   <link type="text/css" rel="stylesheet" href="./css/style.css">
+  
   <title>Aqui tem Saúde - Início</title>
 </head>
 
@@ -41,7 +42,6 @@
       </div>
     </nav>
   </header>
-
   <section class="banner">
     <div class="container">
       <img src="./img/phone-banner.png" alt="">
@@ -147,6 +147,7 @@
             <h1>Pesquisar</h1>
             <img src="../img/icones/logo-direito.svg" alt="">
           </div>
+          <a href="#janela"></a>
 
           <div class="formulario">
             <form action="">
@@ -157,41 +158,43 @@
                 <option value="">Selecionar Bairro</option>
               </select>
             </form>
+             
+              <a href="#bg"> <button id="bairro__button" class="button" href="bg">Procurar</button> </a>
+            
           </div>
           <div id="container">
-            <div id="pag">
-              <a href="#popup">
+          <div id="bg">
+            
+              <a href="" id="close">X</a>
+              <div class="lista-de-clinicas ">
 
-                <button id="bairro__button" class="button" href="#">Procurar</button>
-              </a>
+                <ul>
 
-              <div id="popup">
-                <a href="#pag">Voltar</a>
-                <p>
-                <div class="lista-de-clinicas">
+                  <li class="white">
+                    <a href="">
+                      <div class="imagem-clinica">
+                        <img src="./img/usf-coelhos.png" alt="USF Colehos">
+                      </div>
 
-                  <ul>
-
-                    <li class="white">
-                      <a href="./todos-map.html">
-                        <div class="imagem-clinica">
-                          <img src="./img/usf-coelhos.png" alt="USF Colehos">
-                        </div>
-
-                        <div class="dados-clinica">
-                          </p>
-                          <p>Unidade de saúde da família (USF)</p>
-                          <p>Nome
-                          <p id="NOME">Nome: Coelhos I</p>
-                          <p>Telefone </p>
-                          <p id="TELEFONE">Telefone: (81) 3355-4648</p>
-                          <p>Endereço</p>
-                          <p id="ENDERECO">Endereço: R. Bituruna, Coelhos </p>
-                        </div>
-                      </a>
-                </div>
-                </li>
+                      <div class="dados-clinica">
+                        </p>
+                        <p id="TIPO">Unidade de saúde da família (USF)</p>
+                        <p>Nome
+                        <p id="NOME"></p>
+                        <p>Telefone </p>
+                        <p id="TELEFONE"></p>
+                        <p>Endereço</p>
+                        <p id="ENDERECO"></p>
+                        <p>Horário de funcionamento</p>
+                        <p id="HORARIO"></p>
+                      
+                    </a>
               </div>
+            </div>
+          </div>
+            
+                </li>
+              
             </div>
 
           </div>

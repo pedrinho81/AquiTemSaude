@@ -38,15 +38,21 @@ var buscarDadosBairro = function (btn) {
         for (let i = 0; i < dadosBairro.length; i++) {
           // console.log(dadosBairro[i]);
           data = dadosBairro[i];
+          let resultadoTipoServico = document.getElementById("TIPO")
           let resultadoNome = document.getElementById("NOME");
           let resultadoEndereco = document.getElementById("ENDERECO");
           let resultadoTelefone = document.getElementById("TELEFONE");
+          let resultadoHorario = document.getElementById("HORARIO")
+          let tipoServico = data.tipo_servico
           let nomeBairro = data.nome_oficial;
           let endereco = data.endereço;
-          telefone = data.fone;
+          let horario = data.horario
+          let telefone = data.fone;
+          resultadoTipoServico.innerHTML = tipoServico
           resultadoNome.innerHTML = nomeBairro;
           resultadoEndereco.innerHTML = endereco;
           resultadoTelefone.innerHTML = telefone;
+          resultadoHorario.innerHTML = horario
         }
         //** Escreve nos logs o bairro
         //** Aqui você deve escrever o código conforme o que você quer fazer com o bairro

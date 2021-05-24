@@ -6,6 +6,18 @@
 body, h1 {
   margin: 0;
   padding: 0;
+  animation: init .7s forwards;
+
+}
+@keyframes init {
+  from {
+    opacity:0;
+    transform: translate3d(-50px, 0, 0);
+}
+to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
 }
 
 h2 {
@@ -534,21 +546,55 @@ select {
 }
 
 }
+#bg {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0,.8);
+  position: fixed;
+  display: none;
+}
 
-#container, #popup{
-  width: 600px;
-  height: 600px;
-  overflow: hidden;
-  color: pink;
+#bg:target {
+  display: block;
+  animation: show .7s forwards;
 }
-#pag{
-  width: 600px;
-  height: 1200px;
+
+@keyframes show {
+  from {
+    opacity: 0;
+    max-height: 0;
 }
-#popup{
-  display: flex;
-  
-  margin: 50%;
-  margin-top: 600px;
-  background-color: grey
+to {
+    opacity: 1;
+}
+}
+.box {
+  width: 720px;
+  height: 405px;
+  margin: absolute;
+  margin-left: 360px;
+  left: 50%;
+  top: -410;
+}
+
+
+#close{
+  color: #1374F1;
+  font-family: 'Arial';
+  text-decoration: none;
+  font-size: 35px;
+  position:absolute;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  right: .5em;
+}
+
+#close:hover {
+  opacity: .6;
 }
