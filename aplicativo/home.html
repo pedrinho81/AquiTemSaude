@@ -105,19 +105,48 @@
             </li>
 
             <li>
-              <a href="#">
+              <a href="">
                 <div><img src="../img/icones/postos.svg" alt=""></div>
                 <p>Postos</p>
               </a>
             </li>
 
             <li>
-              <a href="">
+              <a href="#bgClinicas">
                 <div><img src="../img/icones/clinicas.svg" alt=""></div>
                 <p>Clínicas</p>
               </a>
             </li>
-
+            <div id="container">
+              <div id="bgClinicas">
+                
+                  <a href="" id="close">X</a>
+                  <div class="lista-de-clinicas ">
+                    <H4>Pesquisar Clinicas</H4>
+                    <select name=""id="bairro__selectClinicas"></select>
+                    <button id="bairro__buttonClinicas">Pesquisar Clinicas</button>
+                    <ul>
+    
+                      <li class="white">
+                        
+                          
+    
+                          <div class="dados-clinica">
+                            <h6>Tipo</h6>
+                            <p id="tipoClinica"></p>
+                            <h6>Nome </h6>
+                            <p id="nomeClinica"></p>
+                            <h6>Telefone </h6>
+                            <p id="telefoneClinica"></p>
+                            <h6>Endereço</h6>
+                            <p id="enderecoClinica"></p>
+                            <h6>Horário de funcionamento</h6>
+                            <p id="horarioClinica"></p>
+                          
+                        
+                  </div>
+                </div>
+              </div>
             <li>
               <a href="">
                 <div><img src="../img/icones/emergencia.svg" alt=""></div>
@@ -144,16 +173,18 @@
         <div class="pesquisar-mobile">
           <div class="titulo">
             <img src="../img/icones/logo-esquerdo.svg" alt="">
-            <h1>Pesquisar</h1>
+            <h1>Pesquisar Unidades de Saúde</h1>
             <img src="../img/icones/logo-direito.svg" alt="">
           </div>
           <a href="#janela"></a>
 
           <div class="formulario">
             <form action="">
+              <h5>Cidade</h5>
               <select name="" id="">
-                <option value="">Selecionar Cidade</option>
+                <option value="">Recife-PE</option>
               </select>
+              <h5>Bairro</h5>
               <select name="" id="bairro__select">
                 <option value="">Selecionar Bairro</option>
               </select>
@@ -172,20 +203,18 @@
 
                   <li class="white">
                     <a href="">
-                      <div class="imagem-clinica">
-                        <img src="./img/usf-coelhos.png" alt="USF Colehos">
-                      </div>
+                      
 
                       <div class="dados-clinica">
                         </p>
                         <p id="TIPO">Unidade de saúde da família (USF)</p>
-                        <p>Nome
+                        <p id="n">Nome
                         <p id="NOME"></p>
-                        <p>Telefone </p>
+                        <p id="t">Telefone </p>
                         <p id="TELEFONE"></p>
-                        <p>Endereço</p>
+                        <p id="e">Endereço</p>
                         <p id="ENDERECO"></p>
-                        <p>Horário de funcionamento</p>
+                        <p id="h">Horário de funcionamento</p>
                         <p id="HORARIO"></p>
                       
                     </a>
@@ -269,6 +298,7 @@
     <div class="copyright">
       <p>Copyright © 2021 - Todos os direitos reservados.</p>
     </div>
+    <!--WEBSTORAGE (UBS)-->
     <section hidden>
 
       <body>
@@ -303,6 +333,7 @@
 <script src="./js/materialize.js"></script>
 <script src="./js/script.js"></script>
 <script src="/server.js"></script>
+<script src="../clinicas.js"></script>-->
 
 </body>
 

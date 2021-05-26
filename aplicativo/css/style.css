@@ -34,6 +34,246 @@ body {
   background: #DDEFFF;
 }
 
+h4 {
+  color: black;
+}
+select {
+background-color: rgba(255, 255, 255, 0.9);
+width: 100%;
+padding: 5px;
+border: 1px solid #f2f2f2;
+border-radius: 2px;
+height: 3rem;
+}
+
+.lista-de-clinicas p {
+  color: black;
+}
+.lista-de-clinicas h6 {
+  color: black;
+  font-weight: bolder;
+}
+#bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+#bg:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+#bg > div {
+  width: 37.5rem;
+  position: relative;
+  margin: 12% auto;
+  padding: 0.938px 1.25rem;
+  background: #fff;
+}
+
+
+#close{
+  position: absolute;
+  width: 2.875rem;
+  right:21.625rem;
+  top: 128px;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 5px;
+  background: #ff4545;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #8d0000;
+}
+
+#TIPO{
+  font-weight: bold;
+  font-size:0.9rem;
+  margin-top: 0.1rem;
+  color: #000000de ;
+
+}
+#NOME{
+  font-size: 0.9rem;
+  margin-top: 0.1rem;
+  color: #000000de ;
+
+  
+}
+#TELEFONE{
+  font-size: 0.9rem;
+  margin-top: 0.1rem;
+  color: #000000de ;
+
+  
+}
+#ENDERECO{
+  font-size: 0.9rem;
+  margin-top: 0.1rem;
+  color: #000000de ;
+
+  
+}
+#HORARIO{
+  font-size: 0.9rem;
+  margin-top: 0.1rem;
+  color: #000000de ;
+
+  
+}
+#n{
+  font-weight: bold;
+  font-size:0.9rem;
+  margin-top: 0.1rem;
+  color: #000000de ;
+
+  
+}
+#t{
+  font-weight: bold;
+  font-size:0.9rem;
+  margin-top: 0.1rem;
+  color: #000000de ;
+
+  
+}
+#e{
+  font-weight: bold;
+  font-size:0.9rem;
+  margin-top: 0.1rem;
+  color: #000000de ;
+
+  
+}
+#h{
+  font-weight: bold;
+  font-size:0.9rem;
+  margin-top: 0.1rem;
+  color: #0d0d0d;
+  
+}
+
+#bgClinicas {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+#bgClinicas:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+#bgClinicas > div {
+  width: 37.5rem;
+  position: relative;
+  margin: 12% auto;
+  padding: 0.938px 1.25rem;
+  background: #fff;
+}
+
+
+#close{
+  position: absolute;
+  width: 2.875rem;
+  right:21.625rem;
+  top: 128px;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 5px;
+  background: #ff4545;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #8d0000;
+}
+
+#TIPO{
+  font-weight: bold;
+  font-size:0.9rem;
+  margin-top: 0.1rem;
+  color: #000000de ;
+
+}
+#NOME{
+  font-size: 0.9rem;
+  margin-top: 0.1rem;
+  color: #000000de ;
+
+  
+}
+#TELEFONE{
+  font-size: 0.9rem;
+  margin-top: 0.1rem;
+  color: #000000de ;
+
+  
+}
+#ENDERECO{
+  font-size: 0.9rem;
+  margin-top: 0.1rem;
+  color: #000000de ;
+
+  
+}
+#HORARIO{
+  font-size: 0.9rem;
+  margin-top: 0.1rem;
+  color: #000000de ;
+
+  
+}
+#n{
+  font-weight: bold;
+  font-size:0.9rem;
+  margin-top: 0.1rem;
+  color: #000000de ;
+
+  
+}
+#t{
+  font-weight: bold;
+  font-size:0.9rem;
+  margin-top: 0.1rem;
+  color: #000000de ;
+
+  
+}
+#e{
+  font-weight: bold;
+  font-size:0.9rem;
+  margin-top: 0.1rem;
+  color: #000000de ;
+
+  
+}
+#h{
+  font-weight: bold;
+  font-size:0.9rem;
+  margin-top: 0.1rem;
+  color: #0d0d0d;
+  
+}
+
+
 @media screen and (max-width: 720px) {
 
   header {
@@ -546,23 +786,7 @@ select {
 }
 
 }
-#bg {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  padding-top: 100px;
-  top: 0;
-  left: 0;
-  background-color: rgb(0,0,0,.8);
-  position: fixed;
-  display: none;
-}
 
-#bg:target {
-  display: block;
-  animation: show .7s forwards;
-}
 
 @keyframes show {
   from {
@@ -580,21 +804,4 @@ to {
   margin-left: 360px;
   left: 50%;
   top: -410;
-}
-
-
-#close{
-  color: #1374F1;
-  font-family: 'Arial';
-  text-decoration: none;
-  font-size: 35px;
-  position:absolute;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  right: .5em;
-}
-
-#close:hover {
-  opacity: .6;
 }

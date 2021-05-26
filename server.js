@@ -1,26 +1,31 @@
 console.log("init");
 
 data = "";
-fetch(
-  `http://dados.recife.pe.gov.br/api/3/action/datastore_search_sql?sql=SELECT * from "54232db8-ed15-4f1f-90b0-2b5a20eef4cf"`
-) //** consulta a api buscando todas as unidades de saude
-  .then((x) => x.json()) //** Converte o resultado para JSON
-  .then((x) => x.result) //** Acessa a propriedade de resultados
-  .then((x) => {
-    var select = document.getElementById("bairro__select"); //** Encontra o select do html pelo id
-    var options = x.records.map((x) => x.bairro); //** De todo o resultado, vamos pegar só o bairro
+try {
+  fetch(
+    `http://dados.recife.pe.gov.br/api/3/action/datastore_search_sql?sql=SELECT * from "54232db8-ed15-4f1f-90b0-2b5a20eef4cf"`
+  ) //** consulta a api buscando todas as unidades de saude
+    .then((x) => x.json()) //** Converte o resultado para JSON
+    .then((x) => x.result) //** Acessa a propriedade de resultados
+    .then((x) => {
+      var select = document.getElementById("bairro__select"); //** Encontra o select do html pelo id
+      var options = x.records.map((x) => x.bairro); //** De todo o resultado, vamos pegar só o bairro
+  
+      var unique = [...new Set(options)]; //** remover os repetidos
+  
+      for (var i = 0; i < unique.length; i++) {
+        //** para cada bairro
+        var opt = unique[i];
+        var el = document.createElement("option"); //** Crio uma opção dentro do select
+        el.textContent = opt; //** Com o texto sendo o nome do bairro
+        el.value = opt; //** E o valor sendo o nome do bairro também
+        select.appendChild(el); //** Adicionamos ele como opção no select
+      }
+    });
+} catch (error) {
+  console.error(error)
+}
 
-    var unique = [...new Set(options)]; //** remover os repetidos
-
-    for (var i = 0; i < unique.length; i++) {
-      //** para cada bairro
-      var opt = unique[i];
-      var el = document.createElement("option"); //** Crio uma opção dentro do select
-      el.textContent = opt; //** Com o texto sendo o nome do bairro
-      el.value = opt; //** E o valor sendo o nome do bairro também
-      select.appendChild(el); //** Adicionamos ele como opção no select
-    }
-  });
 
 var buscarDadosBairro = function (btn) {
   //** Médoto para buscar as informações do bairro específico
@@ -68,8 +73,7 @@ var buscarDadosBairro = function (btn) {
 //** Com o texto sendo o nome do bairro
 //** E o valor sendo o nome do bairro também
 //** Adicionamos ele como opção no select
-
-var bairroSelect = document.getElementById("bairro__select"); //** Encontramos o select do bairro
+let bairroSelect = document.getElementById("bairro__select"); //** Encontramos o select do bairro
 bairroSelect.addEventListener("click", buscarDadosBairro); //** Vinculamos o método acima com o botão, ao clicar
 
 //ADICIONAR NO WEBSTORAGE
