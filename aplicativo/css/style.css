@@ -46,12 +46,17 @@ border-radius: 2px;
 height: 3rem;
 }
 
+
 .lista-de-clinicas p {
   color: black;
+  
+
 }
 .lista-de-clinicas h6 {
   color: black;
   font-weight: bolder;
+  
+
 }
 #bg {
   position: fixed;
@@ -73,27 +78,51 @@ height: 3rem;
   opacity: 1;
   pointer-events: auto;
 }
-#bg > div {
+#bg > div{
   width: 37.5rem;
   position: relative;
   margin: 12% auto;
   padding: 0.938px 1.25rem;
-  background: #fff;
+
+
 }
 
 
-#close{
-  position: absolute;
-  width: 2.875rem;
-  right:21.625rem;
-  top: 128px;
-  text-align: center;
-  line-height: 30px;
-  margin-top: 5px;
+
+li.white {
+  padding: 2rem;
+  background: linear-gradient(348deg, rgba(83, 130, 233, 0.822) 1%, rgb(255, 255, 255) 80%); 
+
+}
+
+
+
+
+#closeClinicas {
+  position: absolute; top: 0; right: 0; width: 200px; text-align:right;
   background: #ff4545;
-  border-radius: 50%;
-  font-size: 16px;
+  font-size: 1rem;
   color: #8d0000;
+  width: 3rem;
+  font-size: 1.5rem;
+  border-radius: 40%;
+  text-align: center;
+}
+button#bairro__buttonClinicas {
+  margin-top: 1rem;
+}
+
+#close{
+  position: absolute; top: 0; right: 0; width: 200px; text-align:right;
+  background: #ff4545;
+  font-size: 1rem;
+  color: #8d0000;
+  width: 3rem;
+  font-size: 1.5rem;
+  border-radius: 40%;
+  text-align: center;
+  margin-right: 1.3rem;
+  margin-top: 0.1rem;
 }
 
 #TIPO{
@@ -188,23 +217,22 @@ height: 3rem;
   position: relative;
   margin: 12% auto;
   padding: 0.938px 1.25rem;
-  background: #fff;
+  background: linear-gradient(348deg, rgba(83, 130, 233, 0.822) 1%, rgb(255, 255, 255) 80%);
+  
+}
+
+div#resultadoClinica p {
+  animation: init 0.7s forwards;
+
+}
+.resultAnimation {
+  animation: init 0.7s forwards;
 }
 
 
-#close{
-  position: absolute;
-  width: 2.875rem;
-  right:21.625rem;
-  top: 128px;
-  text-align: center;
-  line-height: 30px;
-  margin-top: 5px;
-  background: #ff4545;
-  border-radius: 50%;
-  font-size: 16px;
-  color: #8d0000;
-}
+
+
+
 
 #TIPO{
   font-weight: bold;
@@ -571,10 +599,14 @@ li.inicio-selecionado a{
 .tipos nav ul {
   display: flex;
   justify-content: space-around;
+  margin-left: 50%;
+  margin-right: 50%;
+ 
 }
 
 .tipos nav ul li {
-  margin: 15px 10px 0;
+  margin: 40px 30px 0;
+  
 }
 
 .tipos nav ul li a {
@@ -599,7 +631,7 @@ li.inicio-selecionado a{
 
 .pesquisar, .perto-de-voce {
   width: 90%;
-  max-width: 720px;
+  max-width:1280px;
   min-width: 320px;
   padding: 10px 0;
   margin-bottom: 10px;
@@ -652,12 +684,18 @@ li.inicio-selecionado a{
   background: #2D9CDB;
 }
 
+section.perto-de-voce.js-scroll.ativo {
+  width: 200vh
+
+}
+
 .perto-de-voce {
-  display: flex;
+  display:flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   margin-bottom: 70px;
+  width: 100vh
 }
 
 .perto-de-voce .titulo {
@@ -665,9 +703,9 @@ li.inicio-selecionado a{
 }
 
 .perto-de-voce iframe {
-  width: 70%;
+  width: 90%;
   min-width: 250px;
-  min-height: 180px;
+  min-height: 280px;
 }
 
 .menu-inferior {
@@ -744,6 +782,17 @@ li.inicio-selecionado a{
 
   }
 
+}
+
+.js-scroll {
+  opacity: 0  ;
+  transform: translate3d(-30px, 0, 0);
+  transition: .3s;
+
+}
+.js-scroll.ativo {
+  opacity: 1;
+  transform: translate3d(0px, 0, 0);
 }
 
 

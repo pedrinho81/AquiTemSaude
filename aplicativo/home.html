@@ -24,30 +24,92 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="./css/materialize.css">
   <link type="text/css" rel="stylesheet" href="./css/style.css">
-  
+
   <title>Aqui tem Saúde - Início</title>
 </head>
 
 <body>
+  <div id="container">
+    <div id="bg">
+      <div id="bgUBS">
+          <a href="" id="close">X</a>
 
+
+        <ul id="LISTA">
+
+          <li class="white">
+
+
+
+              </p>
+              <p id="TIPO">Unidade de saúde da família (USF)</p>
+              <p id="n">Nome</p> 
+              <p id="NOME"></p>
+              <p id="t">Telefone </p>
+              <p id="TELEFONE"></p>
+              <p id="e">Endereço</p>
+              <p id="ENDERECO"></p>
+              <p id="h">Horário de funcionamento</p>
+              <p id="HORARIO"></p>
+
+            </ul>
+                  
+        
+        
+
+      </div>
+
+    </div>
+  </div>
+  <div id="bgClinicas">
+    <div>
+      <div class="lista-de-clinicas ">
+        <a href="" id="closeClinicas">X</a>
+        <h4>Pesquisar Clinicas</h4>
+        <select name="" id="bairro__selectClinicas">Selecionar Bairro</select>
+        <button id="bairro__buttonClinicas">Pesquisar Clinicas</button>
+        <ul>
+
+          <li>
+
+
+
+            <div id="dadosClinica">
+              <h6>Tipo</h6>
+              <p id="tipoClinica"></p>
+              <h6>Nome </h6>
+              <p id="nomeClinica"></p>
+              <h6>Telefone </h6>
+              <p id="telefoneClinica"></p>
+              <h6>Endereço</h6>
+              <p id="enderecoClinica"></p>
+              <h6>Horário de funcionamento</h6>
+              <p id="horarioClinica"></p>
+
+
+            </div>
+      </div>
+    </div>
+
+  </div>
   <header>
-    <nav>
+    <nav class="js-menu">
       <div class="nav-wrapper">
         <a href="#" class="brand-logo"><img src="./img/logo-topo.png" alt="Aqui tem Saúde"></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="./home.html">Início</a></li>
+          <li><a href="#pinit">Início</a></li>
           <li><a href="#pesquisar">Pesquisar</a></li>
           <li><a href="#!">Histórico</a></li>
         </ul>
       </div>
     </nav>
   </header>
-  <section class="banner">
+  <section class="banner js-scroll" id="pinit">
     <div class="container">
       <img src="./img/phone-banner.png" alt="">
       <div class="banner-text">
         <h1>Bem-vindo ao </br> Aqui tem Saúde</h1>
-        <p>Agora você tem toda praticidade do Aqui tem Saúde na palma de sua mão, encontre o que precisa de forma fácil
+        <p> Agora você tem toda praticidade do Aqui tem Saúde na palma de sua mão, encontre o que precisa de forma fácil
           e rápida com nosso site para dispositivos móveis.</p>
       </div>
     </div>
@@ -55,7 +117,7 @@
 
   <div class="mobile">
 
-    <section class="topo">
+    <section class="topo js-scroll">
 
       <div class="infos">
 
@@ -94,20 +156,15 @@
 
       </div>
 
-      <div class="tipos">
-        <nav>
+      <div class="tipos js-scroll">
+        <nav class="js-menu">
           <ul>
-            <li>
-              <a href="./todos.html">
-                <div><img src="../img/icones/todos.svg" alt=""></div>
-                <p>Todos</p>
-              </a>
-            </li>
+
 
             <li>
-              <a href="">
+              <a href="#pesquisar">
                 <div><img src="../img/icones/postos.svg" alt=""></div>
-                <p>Postos</p>
+                <p>Unidades de Saúde</p>
               </a>
             </li>
 
@@ -117,42 +174,10 @@
                 <p>Clínicas</p>
               </a>
             </li>
-            <div id="container">
-              <div id="bgClinicas">
-                
-                  <a href="" id="close">X</a>
-                  <div class="lista-de-clinicas ">
-                    <H4>Pesquisar Clinicas</H4>
-                    <select name=""id="bairro__selectClinicas"></select>
-                    <button id="bairro__buttonClinicas">Pesquisar Clinicas</button>
-                    <ul>
-    
-                      <li class="white">
-                        
-                          
-    
-                          <div class="dados-clinica">
-                            <h6>Tipo</h6>
-                            <p id="tipoClinica"></p>
-                            <h6>Nome </h6>
-                            <p id="nomeClinica"></p>
-                            <h6>Telefone </h6>
-                            <p id="telefoneClinica"></p>
-                            <h6>Endereço</h6>
-                            <p id="enderecoClinica"></p>
-                            <h6>Horário de funcionamento</h6>
-                            <p id="horarioClinica"></p>
-                          
-                        
-                  </div>
-                </div>
-              </div>
-            <li>
-              <a href="">
-                <div><img src="../img/icones/emergencia.svg" alt=""></div>
-                <p>Emergência</p>
-              </a>
+            <div id="container"></div>
+             
             </li>
+
 
           </ul>
         </nav>
@@ -160,7 +185,7 @@
 
     </section>
 
-    <section class="pesquisar" id="pesquisar">
+    <section class="pesquisar js-scroll" id="pesquisar">
       <div class="pesquisar-container">
 
         <div class="pesquisar-desktop">
@@ -189,49 +214,22 @@
                 <option value="">Selecionar Bairro</option>
               </select>
             </form>
-             
-              <a href="#bg"> <button id="bairro__button" class="button" href="bg">Procurar</button> </a>
-            
-          </div>
-          <div id="container">
-          <div id="bg">
-            
-              <a href="" id="close">X</a>
-              <div class="lista-de-clinicas ">
 
-                <ul>
-
-                  <li class="white">
-                    <a href="">
-                      
-
-                      <div class="dados-clinica">
-                        </p>
-                        <p id="TIPO">Unidade de saúde da família (USF)</p>
-                        <p id="n">Nome
-                        <p id="NOME"></p>
-                        <p id="t">Telefone </p>
-                        <p id="TELEFONE"></p>
-                        <p id="e">Endereço</p>
-                        <p id="ENDERECO"></p>
-                        <p id="h">Horário de funcionamento</p>
-                        <p id="HORARIO"></p>
-                      
-                    </a>
-              </div>
-            </div>
-          </div>
-            
-                </li>
-              
-            </div>
+            <a href="#bg"> <button id="bairro__button" class="button" href="bg">Procurar</button> </a>
 
           </div>
+          
+
+          </li>
+
+        </div>
+
+      </div>
 
         </div>
     </section>
 
-    <section class="perto-de-voce">
+    <section class="perto-de-voce js-scroll">
       <div class="titulo">
         <img src="../img/icones/logo-esquerdo.svg" alt="">
         <h1>Perto de você</h1>
@@ -244,26 +242,26 @@
 
     </section>
 
-    <section class="menu-inferior">
-      <nav>
+    <section class="menu-inferior js-scroll">
+      <nav class="js-menu">
         <ul>
 
           <li>
-            <a href="">
+            <a href="#pinit">
               <img src="../img/icones/inicio-selecionado.svg" alt="">
               <p>Início</p>
             </a>
           </li>
 
           <li>
-            <a href="">
+            <a href="#pesquisar">
               <img src="../img/icones/buscar.svg" alt="">
               <p>Buscar</p>
             </a>
           </li>
 
           <li>
-            <a href="">
+            <a href="#">
               <img src="../img/icones/histotico.svg" alt="">
               <p>Histórico</p>
             </a>
@@ -275,22 +273,24 @@
   </div>
 
   <footer>
-
-    <div class="infos-rodape">
-      <div class="sobre">
-        <h2>Sobre o Projeto</h2>
-        <p>Projeto criado para a conclusão do primeiro perido do curso de graduação ADS/SI 2021,
-          pelos alunos: Igor Lopes, João Lucas, Jônatas Felix, Pedro Henrique, Walkiria Torres. </p>
+    <section class="js-scroll">
+      <div class="infos-rodape">
+        <div class="sobre">
+          <h2>Sobre o Projeto</h2>
+          <p>Projeto criado para a conclusão do primeiro perido do curso de graduação ADS/SI 2021,
+            pelos alunos: Igor Lopes, João Lucas, Jônatas Felix, Pedro Henrique, Walkiria Torres. </p>
+        </div>
+        <div class="contatos">
+          <h2>Contatos</h2>
+          <ul>
+            <li><a href="#!"><i class="fab fa-instagram"></i>Instagram</a></li>
+            <li><a href="#!"><i class="fab fa-linkedin"></i>Linkedin</a></li>
+            <li><a href=""><i class="far fa-envelope"></i>contato@aquitemsaude.com.br</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="contatos">
-        <h2>Contatos</h2>
-        <ul>
-          <li><a href="#!"><i class="fab fa-instagram"></i>Instagram</a></li>
-          <li><a href="#!"><i class="fab fa-linkedin"></i>Linkedin</a></li>
-          <li><a href=""><i class="far fa-envelope"></i>contato@aquitemsaude.com.br</a></li>
-        </ul>
-      </div>
-    </div>
+    </section>
+   
 
 
 

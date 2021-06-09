@@ -2,6 +2,7 @@ console.log("CLINICASinit")
 /*SELETORES*/
 const select = document.getElementById("bairro__selectClinicas")
 const buscarButton = document.getElementById("bairro__buttonClinicas")
+const buscarrButton = document.getElementById("bairro__buttonClinicass")
 const tipoClinica = document.getElementById("tipoClinica")
 const nomeClinica = document.getElementById("nomeClinica")
 const enderecoClinica = document.getElementById("enderecoClinica")
@@ -26,7 +27,7 @@ try {
             el.textContent = opt
             el.value = opt
             select.appendChild(el)
-            console.log(unique[i])
+            //console.log(unique[i])
         }
     })
 } catch (error) {
@@ -44,7 +45,7 @@ const buscarDadosBairroClinica = (btn) => {
           .then((dadosBairro) => {
             for (let i = 0; i < dadosBairro.length; i++) {
                 dados = dadosBairro[i]
-                console.log(dadosBairro[i])
+                //console.log(dadosBairro[i])
                 tipoClinica.innerHTML = dados.tipo_servico
                 nomeClinica.innerHTML = dados.nome_oficial
                 enderecoClinica.innerHTML = dados.endereço
@@ -58,4 +59,69 @@ const buscarDadosBairroClinica = (btn) => {
     
 
 }
-  buscarButton.addEventListener("click", buscarDadosBairroClinica)
+buscarButton.addEventListener("click", buscarDadosBairroClinica) 
+
+//SCRIPTS DE ESTILIZAÇÃO
+
+function initScrollSuave() {
+    const linksInternos = document.querySelectorAll(".js-menu a[href^='#p'")
+    
+    linksInternos.forEach((link) => {
+        link.addEventListener("click", scrollToSection)
+    })
+    
+    
+    function scrollToSection (event) {
+        event.preventDefault()
+        const href = event.currentTarget.getAttribute("href");
+        const section = document.querySelector(href) 
+        
+        section.scrollIntoView({   
+            behavior: "smooth", 
+            block: "start" 
+        });
+       }
+    }
+    
+    initScrollSuave()
+    
+    function initAnimacaoScroll(){
+    
+       window.addEventListener("scroll", animaScroll)
+       
+       const sections = document.querySelectorAll(".js-scroll")
+       const windowMetade = window.innerHeight * 0.75
+       function animaScroll(){
+           sections.forEach((section) => {
+               const sectionTop = section.getBoundingClientRect().top;
+               const isSectionVisible = (sectionTop - windowMetade) < 0;
+               if(isSectionVisible){
+                   section.classList.add("ativo")
+               } else 
+                   section.classList.remove("ativo")
+           })
+       }
+       
+       animaScroll()
+       }
+    
+       initAnimacaoScroll()
+
+
+       
+
+function animationClinicas() {
+    const texts = document.querySelectorAll("#dadosClinica p")
+    texts.forEach((result) => {
+        
+        result.classList.toggle("resultAnimation")
+        
+       
+        
+    }) 
+    
+}
+
+const botaoAnimation = document.getElementById("bairro__buttonClinicas")
+
+botaoAnimation.addEventListener("click", animationClinicas)
