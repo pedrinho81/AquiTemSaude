@@ -6,6 +6,51 @@
 body {
   margin: 0;
   background: #DDEFFF;
+  animation: init .7s alternate;
+}
+@keyframes init {
+  from {
+    opacity:0;
+    transform: translate3d(-50px, 0, 0);
+}
+to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+}
+@keyframes init2 {
+  from {
+    opacity:0;
+    transform: translate3d(0, 100px, 0);
+}
+to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+}
+@keyframes init3 {
+  from {
+    opacity:0;
+    transform: translate3d(200px, 0, 0);
+}
+to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+}
+
+
+@keyframes shows {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100px, -100px);
+
+}
+to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+
+}
 }
 
 /* PULAR */
@@ -23,6 +68,7 @@ body {
   text-decoration: none;
   padding: 10px;
   z-index: 10;
+  animation: shows 2.5s backwards;
 }
 
 
@@ -47,6 +93,15 @@ body {
 img {
   display: block;
   width: 100%;
+  animation: init 1s forwards ;
+}
+
+#imgIntro2 {
+  animation: init2 4s backwards ;
+
+}
+#imgIntro3 {
+  animation: init3 4s alternate;
 }
 
 .texto {
@@ -63,6 +118,7 @@ img {
 .texto p {
   color: #78746D;
   font-size: 14px;
+  animation: init 2s alternate;
 }
 
 .slider-position {
@@ -84,4 +140,5 @@ img {
   border-radius: 35px;
   padding: 15px 100px;
   background: #2D9CDB;
+  animation: shows 5s alternate;
 }

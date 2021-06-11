@@ -12,6 +12,18 @@ body {
   height: 100vh;
   width: 100vw;
   background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 40%, rgba(177,236,255,0.700717787114846) 100%);
+  animation: init .7s forwards;
+
+}
+@keyframes init {
+  from {
+    opacity:0;
+    transform: translate3d(-50px, 0, 0);
+}
+to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
 }
 
 .abertura {
@@ -27,12 +39,28 @@ body {
   width: 100%;
 }
 
-img {
+body img {
   padding: 0 10px;
   display: block;
   margin: 0 auto;
   width: 80%;
-  animation-name: teste;
+  animation: shows 3s backwards;
+}
+@keyframes shows {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100px, -100px);
+
+}
+to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+
+}
+}
+
+body .btn a {
+  animation: shows 4s backwards;
 }
 
 .btn {
